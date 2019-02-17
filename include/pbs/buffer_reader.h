@@ -9,7 +9,7 @@ class BufferReader : public Reader<T> {
   public:
     BufferReader(const char** data, const char* data_end);
 
-    ReadResult Read(T* proto);
+    ReadResult ReadOne(T* proto) override;
 
   private:
     const char** data_{nullptr};

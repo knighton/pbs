@@ -11,7 +11,7 @@ StringReader<T>::StringReader(const string* data, size_t* index) {
 }
 
 template <typename T>
-ReadResult StringReader<T>::Read(T* proto) {
+ReadResult StringReader<T>::ReadOne(T* proto) {
     return ReadFromString(*data_, index_, proto);
 }
 

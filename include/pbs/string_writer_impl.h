@@ -8,7 +8,7 @@ StringWriter<T>::StringWriter(string* data) {
 }
 
 template <typename T>
-bool StringWriter<T>::Write(const T& proto) {
+bool StringWriter<T>::WriteOne(const T& proto) {
     return WriteToString(proto, data_);
 }
 

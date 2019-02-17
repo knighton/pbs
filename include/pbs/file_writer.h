@@ -11,7 +11,7 @@ class FileWriter : public Writer<T> {
   public:
     FileWriter(FILE* file);
 
-    bool Write(const T& proto);
+    bool WriteOne(const T& proto) override;
 
   private:
     FILE* file_{nullptr};

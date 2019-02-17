@@ -11,7 +11,7 @@ bool Reader<T>::Read(vector<T>* protos, SequenceReadResult* result) {
     result->Clear();
     T proto;
     while (true) {
-        ReadResult rr = Read(&proto);
+        ReadResult rr = ReadOne(&proto);
         switch (rr) {
             case ReadResult::OK:
                 protos->emplace_back(proto);

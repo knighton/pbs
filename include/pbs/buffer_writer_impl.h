@@ -7,7 +7,7 @@ BufferWriter<T>::BufferWriter(char** data, const char* data_end) {
 }
 
 template <typename T>
-bool BufferWriter<T>::Write(const T& proto) {
+bool BufferWriter<T>::WriteOne(const T& proto) {
     return WriteToBuffer(proto, data_, data_end_);
 }
 

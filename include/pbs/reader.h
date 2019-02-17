@@ -20,7 +20,7 @@ class Reader {
     // Sets "proto" on success.
     //
     // Returns a status enum, which is nonzero on failure.
-    virtual ReadResult Read(T* proto) = 0;
+    virtual ReadResult ReadOne(T* proto) = 0;
 
     // Read all PBS entries to the end.
     //

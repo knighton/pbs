@@ -9,7 +9,7 @@ class BufferWriter : public Writer<T> {
   public:
     BufferWriter(char** data, const char* data_end);
 
-    bool Write(const T& proto);
+    bool WriteOne(const T& proto) override;
 
   private:
     char** data_{nullptr};

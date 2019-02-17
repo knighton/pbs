@@ -8,7 +8,7 @@ FileReader<T>::FileReader(FILE* file) {
 }
 
 template <typename T>
-ReadResult FileReader<T>::Read(T* proto) {
+ReadResult FileReader<T>::ReadOne(T* proto) {
     return ReadFromFile(file_, proto);
 }
 

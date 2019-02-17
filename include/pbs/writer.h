@@ -16,7 +16,7 @@ class Writer {
     // Write one entry to a PBS file, advancing the state.
     //
     // Returns whether entry was successfully written.
-    virtual bool Write(const T& proto) = 0;
+    virtual bool WriteOne(const T& proto) = 0;
 
     // Write a sequence of entries to a PBS file, advancing the state.
     //

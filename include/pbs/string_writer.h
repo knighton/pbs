@@ -13,7 +13,7 @@ class StringWriter : public Writer<T> {
   public:
     StringWriter(string* data);
 
-    bool Write(const T& proto);
+    bool WriteOne(const T& proto) override;
 
   private:
     string* data_{nullptr};

@@ -11,7 +11,7 @@ class FileReader : public Reader<T> {
   public:
     FileReader(FILE* file);
 
-    ReadResult Read(T* proto);
+    ReadResult ReadOne(T* proto) override;
 
   private:
     FILE* file_{nullptr};

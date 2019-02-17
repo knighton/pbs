@@ -9,7 +9,7 @@ BufferReader<T>::BufferReader(const char** data, const char* data_end) {
 }
 
 template <typename T>
-ReadResult BufferReader<T>::Read(T* proto) {
+ReadResult BufferReader<T>::ReadOne(T* proto) {
     return ReadFromBuffer(data_, data_end_, proto);
 }
 

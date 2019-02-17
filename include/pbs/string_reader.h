@@ -13,7 +13,7 @@ class StringReader : public Reader<T> {
   public:
     StringReader(const string* data, size_t* index);
 
-    ReadResult Read(T* proto);
+    ReadResult ReadOne(T* proto) override;
 
   private:
     const string* data_{nullptr};

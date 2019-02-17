@@ -6,7 +6,7 @@ FileWriter<T>::FileWriter(FILE* file) {
 }
 
 template <typename T>
-bool FileWriter<T>::Write(const T& proto) {
+bool FileWriter<T>::WriteOne(const T& proto) {
     return WriteToFile(proto, file_);
 }
 
