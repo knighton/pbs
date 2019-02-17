@@ -50,9 +50,9 @@ ReadResult ReadOneFromFile(FILE* file, T* proto) {
 }
 
 template <typename T>
-bool ReadFromFile(FILE* file, vector<T>* protos, SequenceReadResult* status) {
+bool ReadFromFile(FILE* file, vector<T>* protos, SequenceReadResult* result) {
     FileReader<T> reader(file);
-    return reader.Read(protos, status);
+    return reader.Read(protos, result);
 }
 
 }  // namespace pbs

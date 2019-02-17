@@ -31,7 +31,7 @@ ReadResult ReadOneFromFile(FILE* file, T* proto);
 //
 // Returns whether there is no data left.
 template <typename T>
-bool ReadFromFile(FILE* file, vector<T>* protos, SequenceReadResult* status);
+bool ReadFromFile(FILE* file, vector<T>* protos, SequenceReadResult* result);
 
 }  // namespace pbs
 

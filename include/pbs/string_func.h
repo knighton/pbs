@@ -39,7 +39,7 @@ ReadResult ReadOneFromString(const string& data, size_t* index, T* proto);
 // Returns whether there is no data left.
 template <typename T>
 bool ReadFromString(const string& data, size_t* index, vector<T>* protos,
-                    SequenceReadResult* status);
+                    SequenceReadResult* result);
 
 }  // namespace pbs
 

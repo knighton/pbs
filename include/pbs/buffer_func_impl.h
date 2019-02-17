@@ -65,9 +65,9 @@ ReadResult ReadOneFromBuffer(const char** data, const char* data_end,
 
 template <typename T>
 bool ReadFromBuffer(const char** data, const char* data_end, vector<T>* protos,
-                    SequenceReadResult* status) {
+                    SequenceReadResult* result) {
     BufferReader<T> reader(data, data_end);
-    return reader.Read(protos, status);
+    return reader.Read(protos, result);
 }
 
 }  // namespace pbs

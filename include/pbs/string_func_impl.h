@@ -61,9 +61,9 @@ ReadResult ReadOneFromString(const string& data, size_t* index, T* proto) {
 
 template <typename T>
 bool ReadFromString(const string& data, size_t* index, vector<T>* protos,
-                    SequenceReadResult* status) {
+                    SequenceReadResult* result) {
     StringReader<T> reader(&data, index);
-    return reader.Read(protos, status);
+    return reader.Read(protos, result);
 }
 
 }  // namespace pbs

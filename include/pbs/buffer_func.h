@@ -36,7 +36,7 @@ ReadResult ReadOneFromBuffer(const char** data, const char* data_end, T* proto);
 // Returns whether there is no data left.
 template <typename T>
 bool ReadFromBuffer(const char** data, const char* data_end, vector<T>* protos,
-                    SequenceReadResult* status);
+                    SequenceReadResult* result);
 
 }  // namespace pbs
 
