@@ -48,6 +48,7 @@ ReadResult ReadFromString(const string& data, size_t* index, T* proto) {
     }
     string s(header.size, '\0');
     memcpy(&s[0], &data[*index], header.size);
+    *index += header.size;
     uint32_t redo_crc32 = CRC32(s);
     if (header.crc32 != redo_crc32) {
         return ReadResult::BAD_CHECKSUM;
