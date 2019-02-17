@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+message Birthday {
+    required uint32 year = 1;   // Eg, 2019.
+    required uint32 month = 2;  // 1-12.
+    required uint32 day = 3;    // 1-31.
+}
+
+message Person {
+    required string name = 1;
+    optional string phone = 2;
+    optional Birthday birthday = 3;
+}
