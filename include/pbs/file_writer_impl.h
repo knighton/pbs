@@ -7,7 +7,7 @@ FileWriter<T>::FileWriter(FILE* file) {
 
 template <typename T>
 bool FileWriter<T>::WriteOne(const T& proto) {
-    return WriteToFile(proto, file_);
+    return WriteOneToFile(proto, file_);
 }
 
 }  // namespace pbs

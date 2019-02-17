@@ -12,7 +12,7 @@ StringReader<T>::StringReader(const string* data, size_t* index) {
 
 template <typename T>
 ReadResult StringReader<T>::ReadOne(T* proto) {
-    return ReadFromString(*data_, index_, proto);
+    return ReadOneFromString(*data_, index_, proto);
 }
 
 }  // namespace pbs

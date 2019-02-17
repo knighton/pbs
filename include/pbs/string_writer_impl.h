@@ -9,7 +9,7 @@ StringWriter<T>::StringWriter(string* data) {
 
 template <typename T>
 bool StringWriter<T>::WriteOne(const T& proto) {
-    return WriteToString(proto, data_);
+    return WriteOneToString(proto, data_);
 }
 
 }  // namespace pbs

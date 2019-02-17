@@ -11,7 +11,7 @@ using std::memcpy;
 namespace pbs {
 
 template <typename T>
-bool WriteToString(const T& proto, string* data) {
+bool WriteOneToString(const T& proto, string* data) {
     string s;
     proto.SerializeToString(&s);
     size_t index = data->size();
@@ -32,7 +32,7 @@ size_t WriteToString(const vector<T>& protos, string* data) {
 }
 
 template <typename T>
-ReadResult ReadFromString(const string& data, size_t* index, T* proto) {
+ReadResult ReadOneFromString(const string& data, size_t* index, T* proto) {
     EntryHeader header;
     if (data.size() < *index) {
         assert(false);

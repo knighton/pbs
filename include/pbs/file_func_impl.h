@@ -9,7 +9,7 @@ using std::string;
 namespace pbs {
 
 template <typename T>
-bool WriteToFile(const T& proto, FILE* file) {
+bool WriteOneToFile(const T& proto, FILE* file) {
     string data;
     proto.SerializeToString(&data);
     EntryHeader header;
@@ -28,7 +28,7 @@ size_t WriteToFile(const vector<T>& protos, FILE* file) {
 }
 
 template <typename T>
-ReadResult ReadFromFile(FILE* file, T* proto) {
+ReadResult ReadOneFromFile(FILE* file, T* proto) {
     EntryHeader header;
     if (feof(file)) {
         return ReadResult::END;

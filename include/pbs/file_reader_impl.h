@@ -9,7 +9,7 @@ FileReader<T>::FileReader(FILE* file) {
 
 template <typename T>
 ReadResult FileReader<T>::ReadOne(T* proto) {
-    return ReadFromFile(file_, proto);
+    return ReadOneFromFile(file_, proto);
 }
 
 }  // namespace pbs

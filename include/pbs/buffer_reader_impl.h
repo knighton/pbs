@@ -10,7 +10,7 @@ BufferReader<T>::BufferReader(const char** data, const char* data_end) {
 
 template <typename T>
 ReadResult BufferReader<T>::ReadOne(T* proto) {
-    return ReadFromBuffer(data_, data_end_, proto);
+    return ReadOneFromBuffer(data_, data_end_, proto);
 }
 
 }  // namespace pbs

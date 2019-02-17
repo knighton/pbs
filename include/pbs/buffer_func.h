@@ -14,7 +14,7 @@ namespace pbs {
 //
 // Returns whether the proto could be fit into the buffer.
 template <typename T>
-bool WriteToBuffer(const T& proto, char** data, const char* data_end);
+bool WriteOneToBuffer(const T& proto, char** data, const char* data_end);
 
 // Protos -> buffer.
 //
@@ -27,7 +27,7 @@ size_t WriteToBuffer(const vector<T>& protos, char** data,
 //
 // Advances the data pointer.
 template <typename T>
-ReadResult ReadFromBuffer(const char** data, const char* data_end, T* proto);
+ReadResult ReadOneFromBuffer(const char** data, const char* data_end, T* proto);
 
 // Buffer -> protos.
 //

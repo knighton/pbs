@@ -12,7 +12,7 @@ using std::string;
 namespace pbs {
 
 template <typename T>
-bool WriteToBuffer(const T& proto, char** data, const char* data_end) {
+bool WriteOneToBuffer(const T& proto, char** data, const char* data_end) {
     string s;
     proto.SerializeToString(&s);
     EntryHeader header;
@@ -36,7 +36,8 @@ size_t WriteToBuffer(const vector<T>& protos, char** data,
 }
 
 template <typename T>
-ReadResult ReadFromBuffer(const char** data, const char* data_end, T* proto) {
+ReadResult ReadOneFromBuffer(const char** data, const char* data_end,
+                             T* proto) {
     EntryHeader header;
     if (data_end < *data) {
         assert(false);

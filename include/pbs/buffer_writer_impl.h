@@ -8,7 +8,7 @@ BufferWriter<T>::BufferWriter(char** data, const char* data_end) {
 
 template <typename T>
 bool BufferWriter<T>::WriteOne(const T& proto) {
-    return WriteToBuffer(proto, data_, data_end_);
+    return WriteOneToBuffer(proto, data_, data_end_);
 }
 
 }  // namespace pbs

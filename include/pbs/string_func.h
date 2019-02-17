@@ -16,7 +16,7 @@ namespace pbs {
 //
 // Returns whether successful.
 template <typename T>
-bool WriteToString(const T& proto, string* data);
+bool WriteOneToString(const T& proto, string* data);
 
 // Protos -> string.
 //
@@ -30,7 +30,7 @@ size_t WriteToString(const vector<T>& protos, string* data);
 //
 // Advances the index.
 template <typename T>
-ReadResult ReadFromString(const string& data, size_t* index, T* proto);
+ReadResult ReadOneFromString(const string& data, size_t* index, T* proto);
 
 // String -> protos.
 //
