@@ -27,3 +27,4 @@ all:
 		--proto_path src/
 	clang++ src/string_func_test.cpp $(COMMON) $(PROTOBUF) \
 		-o bin/string_func_test
+	clang++ src/test.cpp $(COMMON) $(PROTOBUF) -o bin/test
