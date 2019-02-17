@@ -13,6 +13,7 @@ template <typename T>
 class Reader {
   public:
     // Initialize with the state we are reading from (string, file, etc).
+    virtual ~Reader();
 
     // Read one PBS entry, advancing the state.
     //

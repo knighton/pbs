@@ -3,6 +3,10 @@
 namespace pbs {
 
 template <typename T>
+Reader<T>::~Reader() {
+}
+
+template <typename T>
 bool Reader<T>::Read(vector<T>* protos, SequenceReadResult* result) {
     result->Clear();
     T proto;

@@ -11,6 +11,7 @@ template <typename T>
 class Writer {
   public:
     // Initialize with the state we are reading from (string, file, etc).
+    virtual ~Writer();
 
     // Write one entry to a PBS file, advancing the state.
     //
