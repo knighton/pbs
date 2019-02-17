@@ -1,3 +1,4 @@
+#include <cassert>
 #include <cstring>
 #include <string>
 
@@ -16,7 +17,7 @@ bool WriteToBuffer(const T& proto, char** data, const char* data_end) {
     proto.SerializeToString(&s);
     EntryHeader header;
     header.crc32 = CRC32(s);
-    header.size = s.size();
+    header.size = static_cast<uint32_t>(s.size());
     if (data_end < *data + sizeof(header) + s.size()) {
         return false;
     }

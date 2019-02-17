@@ -17,7 +17,7 @@ bool WriteToString(const T& proto, string* data) {
     size_t index = data->size();
     EntryHeader header;
     header.crc32 = CRC32(s);
-    header.size = s.size();
+    header.size = static_cast<uint32_t>(s.size());
     data->resize(index + sizeof(header) + header.size);
     memcpy(&(*data)[index], &header, sizeof(header));
     index += sizeof(header);

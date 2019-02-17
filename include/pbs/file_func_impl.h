@@ -14,7 +14,7 @@ bool WriteToFile(const T& proto, FILE* file) {
     proto.SerializeToString(&data);
     EntryHeader header;
     header.crc32 = CRC32(data);
-    header.size = data.size();
+    header.size = static_cast<uint32_t>(data.size());
     if (fwrite(&header, sizeof(header), 1, file) != 1) {
         return false;
     }

@@ -10,7 +10,7 @@ enum class ReadResult {
     END = 1,           // Reached the end.  No data left to parse.
     PARTIAL = 2,       // Reached the end.  Incomplete/truncated data present.
     BAD_CHECKSUM = 3,  // Read entry, but checksum failure.
-    BAD_PROTO = 4,     // Read entry and checksum pass, but proto parse fail.
+    BAD_PROTO = 4      // Read entry and checksum pass, but proto parse fail.
 };
 
 // Result of parsing all PBS entries.
